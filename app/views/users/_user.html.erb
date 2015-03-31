@@ -1,0 +1,14 @@
+ <tr>
+   <td>
+     <%= user.name %>
+   </td>
+   <td>
+     <%= user.mail_address %>
+   </td>
+   <td>
+     <%= user.birthday.strftime('%Y/%m/%d') %>
+   </td>
+   <td>
+     <%= user.hobbies.pluck(:name).join(",") %>
+   </td>
+ </tr>

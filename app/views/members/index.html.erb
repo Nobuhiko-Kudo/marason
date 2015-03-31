@@ -1,0 +1,32 @@
+<%= form_tag members_path, method: 'get' do %>
+  <div>  
+    <div>
+      <%= label_tag "名前（カナ）" %>
+      <%= text_field_tag :name_kana, params[:name_kana] %>
+    </div>
+    <div>
+      <%= label_tag "グループ" %>
+      <%= select_tag("select_group",options_from_collection_for_select(Group.all,:id,:name), :prompt => "-選択してください-") %>
+    </div>
+    <div>
+      <%= submit_tag "検索" %>
+    </div>
+    <br/>
+    <br/>
+  </div>
+  <% if @members %>
+    <div> 検索結果：<%= @members.count %></div>
+    <table border="1" cellpadding="5">
+      <tr>
+        <td>名前（漢字）</td>
+        <td>名前（カナ）</td>
+        <td>メールアドレス</td>
+        <td>拠点</td>
+        <td>グループ</td>
+        <td>入社年月日</td>
+      </tr>
+      <%= render @members %>
+    </table>
+  <% end %>
+  <div> <%= link_to("２問目へ", sales_path) %></div>
+<% end %>

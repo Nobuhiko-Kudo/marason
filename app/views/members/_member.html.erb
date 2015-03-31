@@ -1,0 +1,9 @@
+<% @group = member.group %>
+<tr>
+  <td> <%= member.name %> </td>
+  <td> <%= member.name_kana %> </td>
+  <td> <%= member.mail_address %> </td>
+  <td> <%= member.area %> </td>
+  <td> <%= @group.name %> </td>
+  <td> <%= member.join_date.strftime('%Y/%m/%d') %> </td>
+</tr>

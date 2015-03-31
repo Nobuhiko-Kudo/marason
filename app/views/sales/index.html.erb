@@ -1,0 +1,12 @@
+<div>売上一覧：<%= Sale.count %></div>
+<table border="1" cellpadding="5">
+  <tr>
+    <td>売上ID</td>
+    <td>顧客名</td>
+    <td>弊社担当</td>
+    <td>売上合計金額（税込）</td>
+    <td>売上日</td>
+    <td></td>
+  </tr>
+    <%=render @sales %>
+</table>

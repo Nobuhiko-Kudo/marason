@@ -1,0 +1,20 @@
+<tr>
+  <td>
+    <%= sale.id %>
+  </td> 
+  <td>
+    <%= sale.custom_name %>
+  </td>
+  <td>
+    <%= sale.staff_name %>
+  </td>
+  <td>
+    <%= sale.sum.to_i %> 円
+  </td>
+  <td>
+    <%= sale.sale_date.strftime('%Y/%m/%d') %>
+  </td>
+  <td>
+    <%= link_to("detail", sale_path(sale.id)) %>
+  </td>
+</tr>

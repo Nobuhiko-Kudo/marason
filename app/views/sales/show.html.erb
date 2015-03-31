@@ -1,0 +1,69 @@
+<h1>売上明細</h1>
+<table>
+  <tr>
+    <td>
+      売上ID
+    </td>
+    <td>
+     : 
+    </td>
+    <td>
+      <%= @sale[0].id %> 
+    </td>
+  </tr>
+  <tr>
+    <td>
+      顧客名
+    </td>
+    <td>
+      :
+    </td>
+    <td>
+      <%= @sale[0].custom_name %>
+    </td>
+  </tr>
+ <tr>
+    <td>
+      弊社担当
+    </td>
+    <td>
+      :
+    </td>
+    <td>
+      <%= @sale[0].staff_name %>
+    </td>
+  </tr>
+ <tr>
+    <td>
+      売上金額（税込）
+    </td>
+    <td>
+      :
+    </td>
+    <td>
+      <%= @sale[0].sum.to_i %>円 
+    </td>
+  </tr>
+</table>
+
+<h2>明細</h2>
+<table border="1" cellpdding="5">
+  <tr>
+    <td>
+      商品名
+    </td>
+    <td>
+      単価
+    </td>
+    <td>
+      個数
+    </td>
+    <td>
+      計
+    </td>
+  </tr>
+  <%= render @salesDetails %>
+</table>
+<div>
+  <%= link_to("5問目へ", users_path) %>
+</div>
